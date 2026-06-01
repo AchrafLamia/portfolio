@@ -1,8 +1,34 @@
+import { Zap, Cloud, Eye, GitBranch } from "lucide-react";
+
 const cards = [
-  { icon: "⚡", title: "Edge AI", desc: "K230 · TensorRT INT8 · ONNX · Knowledge Distillation · C++ runtimes under RTOS" },
-  { icon: "☁️", title: "Cloud — AWS", desc: "EKS · Karpenter · Terraform · ArgoCD · EMQX · ClickHouse · multi-AZ VPC" },
-  { icon: "👁️", title: "Computer Vision", desc: "YOLOv12 · BoTSORT · SAM2 · StrongSort+ReID · real-time tracking pipelines" },
-  { icon: "⚙️", title: "MLOps", desc: "Roboflow · W&B · SageMaker · CI/CD · model versioning & deployment" },
+  {
+    icon: Zap,
+    title: "Edge AI",
+    desc: "K230 · TensorRT INT8 · ONNX · Knowledge Distillation · C++ runtimes under RTOS",
+    color: "text-violet-400",
+    bg: "bg-violet-500/08",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud — AWS",
+    desc: "EKS · Karpenter · Terraform · ArgoCD · EMQX · ClickHouse · multi-AZ VPC",
+    color: "text-orange-400",
+    bg: "bg-orange-500/08",
+  },
+  {
+    icon: Eye,
+    title: "Computer Vision",
+    desc: "YOLOv12 · BoTSORT · SAM2 · StrongSort+ReID · real-time tracking pipelines",
+    color: "text-blue-400",
+    bg: "bg-blue-500/08",
+  },
+  {
+    icon: GitBranch,
+    title: "MLOps",
+    desc: "Roboflow · W&B · SageMaker · CI/CD · model versioning & deployment",
+    color: "text-cyan-400",
+    bg: "bg-cyan-500/08",
+  },
 ];
 
 const tags = ["Python", "C++", "PyTorch", "TensorRT", "Terraform", "AWS EKS", "Docker", "MQTT5"];
@@ -14,7 +40,6 @@ export default function About() {
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left */}
           <div>
             <p className="section-label">About me</p>
             <h2 className="text-4xl sm:text-5xl font-black leading-tight mb-6">
@@ -35,30 +60,29 @@ export default function About() {
                 (top engineering school, Morocco). Fluent in Arabic, French (C2), and English (C2).
               </p>
             </div>
-
             <div className="flex flex-wrap gap-2 mt-8">
               {tags.map((t) => (
-                <span
-                  key={t}
-                  className="text-xs font-semibold border border-white/08 bg-white/03 text-slate-400 px-3 py-1.5 rounded-full"
-                >
+                <span key={t} className="text-xs font-semibold border border-white/08 bg-white/03 text-slate-400 px-3 py-1.5 rounded-full">
                   {t}
                 </span>
               ))}
             </div>
           </div>
 
-          {/* Right — specialty cards */}
           <div className="grid grid-cols-2 gap-4">
-            {cards.map((c) => (
-              <div key={c.title} className="glass rounded-2xl p-6 hover:scale-[1.02] transition-transform">
-                <span className="text-3xl mb-4 block">{c.icon}</span>
-                <h3 className="font-bold text-white mb-2 text-sm">{c.title}</h3>
-                <p className="text-slate-500 text-xs leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
+            {cards.map((c) => {
+              const Icon = c.icon;
+              return (
+                <div key={c.title} className="glass rounded-2xl p-6 hover:scale-[1.02] transition-transform">
+                  <div className={`w-10 h-10 rounded-xl ${c.bg} flex items-center justify-center mb-4`}>
+                    <Icon size={20} className={c.color} />
+                  </div>
+                  <h3 className="font-bold text-white mb-2 text-sm">{c.title}</h3>
+                  <p className="text-slate-500 text-xs leading-relaxed">{c.desc}</p>
+                </div>
+              );
+            })}
           </div>
-
         </div>
       </div>
     </section>
