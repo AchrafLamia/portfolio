@@ -1,105 +1,105 @@
 import { ExternalLink } from "lucide-react";
-import { GithubIcon } from "@/components/icons";
+import { GithubIcon } from "./icons";
 
 const projects = [
   {
-    title: "Soccer Analytics Platform",
     emoji: "⚽",
-    description:
-      "Real-time sports analytics pipeline: YOLOv8 multi-class detection, ViT-based ReID player tracking, Voronoi tactical zone analysis, per-player speed estimation, and heatmaps — served via a Dockerized Flask API.",
-    highlights: [">90% mAP@50", ">70% tagging reduction", ">500 match hours processed"],
+    title: "Soccer Analytics Platform",
+    desc: "Real-time sports analytics: YOLOv8 multi-class detection, ViT-based ReID player tracking, Voronoi tactical zones, per-player speed estimation, heatmaps — served via a Dockerized Flask API.",
+    highlights: [">90% mAP@50", ">70% tagging reduction", ">500 match hours"],
     tags: ["Python", "YOLOv8", "StrongSort", "ReID", "SigLIP", "Docker", "Flask"],
     github: "https://github.com/AchrafLamia/soccer-analytics-Vertigo-Digital",
     category: "Computer Vision",
+    cat: "cv",
     featured: true,
   },
   {
-    title: "Industrial CV System — Textile Monitoring",
     emoji: "🏭",
-    description:
-      "Real-time production monitoring system for textile lines. YOLOv12 + BoTSORT pipeline trained on 40k SAM2-annotated frames; knowledge-distilled to nano → ONNX → TensorRT INT8 → .kmodel for K230 edge deployment.",
+    title: "Industrial CV — Textile Monitoring",
+    desc: "Production monitoring for textile lines. YOLOv12 + BoTSORT on 40k SAM2-annotated frames; knowledge-distilled to nano → TensorRT INT8 → .kmodel for K230 edge at 22 FPS.",
     highlights: ["mAP@50 96.2%", "22 FPS on K230", "<5% mAP after KD"],
     tags: ["YOLOv12", "BoTSORT", "SAM2", "TensorRT", "K230", "C++", "RTOS"],
     github: "https://github.com/AchrafLamia/yolo-kd-k230-pipeline",
     category: "Edge AI",
+    cat: "edge",
     featured: true,
   },
   {
-    title: "Nitra IoT Platform — AWS Infrastructure",
     emoji: "☁️",
-    description:
-      "14-layer production AWS infrastructure for an industrial IoT SaaS. Terraform-provisioned EKS with Karpenter, ArgoCD GitOps, EMQX Cloud MQTT5/mTLS for 10,000+ devices, ClickHouse OLAP + RDS PostgreSQL dual data store.",
-    highlights: ["~40% infra cost cut", "10,000+ IoT devices", "14 infra layers"],
-    tags: ["AWS EKS", "Terraform", "Karpenter", "ArgoCD", "EMQX", "ClickHouse", "mTLS"],
+    title: "Nitra IoT — AWS Infrastructure",
+    desc: "14-layer production AWS infra: Terraform-provisioned EKS + Karpenter, ArgoCD GitOps, EMQX Cloud MQTT5/mTLS for 10,000+ devices, ClickHouse OLAP + RDS dual store.",
+    highlights: ["~40% cost reduction", "10,000+ devices", "14 infra layers"],
+    tags: ["AWS EKS", "Terraform", "Karpenter", "ArgoCD", "EMQX", "ClickHouse"],
     github: null,
     category: "Cloud & MLOps",
+    cat: "cloud",
     featured: true,
   },
   {
-    title: "K230 BoTSORT Tracker",
     emoji: "⚡",
-    description:
-      "C++ multi-object tracker ported to K230 embedded AI hardware. BoTSORT algorithm with Kalman filter compiled as native ELF binary under RTOS, running YOLO kmodel inference at 22 FPS.",
-    highlights: ["22 FPS on-device", "Native ELF under RTOS", "C++ runtime"],
-    tags: ["C++", "BoTSORT", "K230", "RTOS", "nncase", "kmodel"],
+    title: "K230 BoTSORT Tracker",
+    desc: "C++ BoTSORT with Kalman filter compiled as native ELF under RTOS. Runs YOLO kmodel inference at 22 FPS on K230 embedded AI chip.",
+    highlights: ["22 FPS", "Native ELF / RTOS", "C++ runtime"],
+    tags: ["C++", "BoTSORT", "K230", "RTOS", "nncase"],
     github: "https://github.com/AchrafLamia/-k230-botsort-tracker",
     category: "Edge AI",
+    cat: "edge",
     featured: false,
   },
   {
-    title: "Nitra ESP32 Mesh Firmware",
     emoji: "📡",
-    description:
-      "ESP32 FreeRTOS firmware for industrial IoT mesh networks. BLE provisioning, ESP-WiFi-Mesh, MQTT5/mTLS over EMQX Cloud, OTA updates across all mesh nodes, X.509 per-device certificate authentication.",
-    highlights: ["10+ mesh nodes deployed", "mTLS / X.509", "OTA without downtime"],
-    tags: ["C", "ESP-IDF", "FreeRTOS", "MQTT5", "mTLS", "BLE", "OTA"],
+    title: "Nitra ESP32 Mesh Firmware",
+    desc: "FreeRTOS firmware: BLE provisioning, WiFi Mesh, MQTT5/mTLS over EMQX Cloud, OTA updates, X.509 per-device cert authentication.",
+    highlights: ["10+ nodes", "mTLS / X.509", "OTA live"],
+    tags: ["C", "ESP-IDF", "FreeRTOS", "MQTT5", "mTLS", "BLE"],
     github: "https://github.com/AchrafLamia/nitra-esp32-mesh",
-    category: "Embedded & IoT",
+    category: "IoT",
+    cat: "iot",
     featured: false,
   },
   {
-    title: "L'BALE — AI-Powered Marketplace",
     emoji: "🛍️",
-    description:
-      "Second-hand clothing marketplace with real-time live-selling via AWS IVS. AI listing pipeline (YOLOv12 + CLIP) auto-generates product titles and tags from photos, cutting manual listing time by >80%. Flutter mobile app at MVP stage.",
-    highlights: [">80% listing time reduction", "AWS IVS live-selling", "MVP deployed"],
-    tags: ["Flutter", "Node.js", "PostgreSQL", "AWS IVS", "YOLOv12", "CLIP", "WebSocket"],
+    title: "L'BALE — AI Marketplace",
+    desc: "Second-hand clothing marketplace with live-selling (AWS IVS). AI pipeline (YOLOv12 + CLIP) auto-generates product listings from photos — >80% time reduction. Flutter MVP deployed.",
+    highlights: [">80% listing time saved", "AWS IVS live-selling", "Flutter MVP"],
+    tags: ["Flutter", "Node.js", "AWS IVS", "YOLOv12", "CLIP"],
     github: "https://github.com/AchrafLamia/lbale-app",
     category: "Full-Stack AI",
+    cat: "fullstack",
     featured: false,
   },
   {
-    title: "Gesture & Action Recognition",
     emoji: "🤖",
-    description:
-      "Three-architecture study of gesture and action recognition: ResNet18+LSTM with MediaPipe skeleton extraction and Kafka streaming, TCN with INT8 edge quantization, and Twins-SVT Vision Transformer achieving 91.9% accuracy.",
-    highlights: ["91.9% accuracy (Twins-SVT)", "INT8 edge-quantized TCN", "Kafka streaming"],
-    tags: ["PyTorch", "ResNet18", "LSTM", "TCN", "Twins-SVT", "MediaPipe", "Kafka"],
+    title: "Gesture & Action Recognition",
+    desc: "Three-architecture study: ResNet18+LSTM + Kafka streaming, TCN with INT8 edge quantization, and Twins-SVT Vision Transformer at 91.9% accuracy.",
+    highlights: ["91.9% (Twins-SVT)", "INT8 TCN for edge", "Kafka streaming"],
+    tags: ["PyTorch", "ResNet18", "TCN", "Twins-SVT", "MediaPipe"],
     github: "https://github.com/AchrafLamia/gesture-action-recognition",
     category: "Research",
+    cat: "research",
     featured: false,
   },
   {
-    title: "Financial Portfolio Analysis",
     emoji: "📈",
-    description:
-      "Quantitative portfolio optimization: efficient frontier via Monte Carlo simulation, maximum Sharpe ratio identification, VaR at 95%/99% confidence, minimum variance portfolio via scipy.optimize.",
-    highlights: ["Efficient frontier", "Sharpe & VaR analysis", "Monte Carlo simulation"],
-    tags: ["Python", "NumPy", "SciPy", "Matplotlib", "Alpha Vantage"],
+    title: "Financial Portfolio Analysis",
+    desc: "Quantitative portfolio optimization: efficient frontier via Monte Carlo, Sharpe ratio, VaR at 95%/99%, minimum variance via scipy.optimize.",
+    highlights: ["Efficient frontier", "Sharpe & VaR", "Monte Carlo"],
+    tags: ["Python", "NumPy", "SciPy", "Matplotlib"],
     github: "https://github.com/AchrafLamia/financial-portfolio-analysis",
     category: "Quantitative",
+    cat: "quant",
     featured: false,
   },
 ];
 
-const categoryColors: Record<string, string> = {
-  "Computer Vision": "bg-blue-50 text-blue-600 border-blue-100",
-  "Edge AI":         "bg-violet-50 text-violet-600 border-violet-100",
-  "Cloud & MLOps":   "bg-orange-50 text-orange-600 border-orange-100",
-  "Embedded & IoT":  "bg-teal-50 text-teal-600 border-teal-100",
-  "Full-Stack AI":   "bg-pink-50 text-pink-600 border-pink-100",
-  "Research":        "bg-indigo-50 text-indigo-600 border-indigo-100",
-  "Quantitative":    "bg-green-50 text-green-600 border-green-100",
+const catColor: Record<string, string> = {
+  cv:        "bg-blue-500/12 text-blue-400 border-blue-500/25",
+  edge:      "bg-violet-500/12 text-violet-400 border-violet-500/25",
+  cloud:     "bg-orange-500/12 text-orange-400 border-orange-500/25",
+  iot:       "bg-teal-500/12 text-teal-400 border-teal-500/25",
+  fullstack: "bg-pink-500/12 text-pink-400 border-pink-500/25",
+  research:  "bg-indigo-500/12 text-indigo-400 border-indigo-500/25",
+  quant:     "bg-emerald-500/12 text-emerald-400 border-emerald-500/25",
 };
 
 export default function Projects() {
@@ -107,43 +107,35 @@ export default function Projects() {
   const rest = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-28 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/08 to-transparent pointer-events-none" />
+      <div className="relative max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-3">
-            Projects
-          </p>
-          <h2 className="text-4xl font-bold text-slate-900">
-            Featured Work
+          <p className="section-label">Work</p>
+          <h2 className="text-4xl sm:text-5xl font-black">
+            Featured <span className="grad-text">Projects</span>
           </h2>
-          <p className="text-slate-500 mt-3">
-            Production systems, research, and passion projects
-          </p>
+          <p className="text-slate-500 mt-3">Production systems, research, and passion projects</p>
         </div>
 
-        {/* Featured — large cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {featured.map((p) => (
-            <ProjectCard key={p.title} project={p} large />
-          ))}
+        {/* Featured row */}
+        <div className="grid md:grid-cols-3 gap-5 mb-5">
+          {featured.map((p) => <Card key={p.title} p={p} large />)}
         </div>
 
-        {/* Rest — smaller grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {rest.map((p) => (
-            <ProjectCard key={p.title} project={p} large={false} />
-          ))}
+        {/* Rest */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+          {rest.map((p) => <Card key={p.title} p={p} large={false} />)}
         </div>
 
-        <div className="text-center mt-10">
+        <div className="text-center">
           <a
             href="https://github.com/AchrafLamia"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 border border-slate-300 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+            className="btn-outline"
           >
-            <GithubIcon size={18} />
-            View all on GitHub
+            <GithubIcon size={18} /> View all on GitHub
           </a>
         </div>
       </div>
@@ -151,45 +143,23 @@ export default function Projects() {
   );
 }
 
-function ProjectCard({
-  project,
-  large,
-}: {
-  project: (typeof projects)[0];
-  large: boolean;
-}) {
+function Card({ p, large }: { p: typeof projects[0]; large: boolean }) {
   return (
-    <div
-      className={`group bg-white border border-slate-200 rounded-2xl hover:border-blue-200 hover:shadow-lg transition-all flex flex-col ${
-        large ? "p-7" : "p-5"
-      }`}
-    >
+    <div className={`group glass rounded-2xl flex flex-col transition-all duration-200 hover:scale-[1.02] ${large ? "p-7" : "p-5"}`}>
       <div className="flex items-start justify-between mb-4">
-        <span className={large ? "text-3xl" : "text-2xl"}>{project.emoji}</span>
-        <span
-          className={`text-xs font-semibold border px-2.5 py-1 rounded-full ${
-            categoryColors[project.category] ?? "bg-slate-100 text-slate-600 border-slate-200"
-          }`}
-        >
-          {project.category}
+        <span className={large ? "text-4xl" : "text-2xl"}>{p.emoji}</span>
+        <span className={`text-xs font-bold border px-2.5 py-1 rounded-full ${catColor[p.cat]}`}>
+          {p.category}
         </span>
       </div>
 
-      <h3 className={`font-bold text-slate-900 mb-2 ${large ? "text-lg" : "text-base"}`}>
-        {project.title}
-      </h3>
-
-      <p className={`text-slate-500 leading-relaxed mb-4 flex-1 ${large ? "text-sm" : "text-xs"}`}>
-        {project.description}
-      </p>
+      <h3 className={`font-black text-white mb-2 ${large ? "text-lg" : "text-sm"}`}>{p.title}</h3>
+      <p className={`text-slate-400 leading-relaxed mb-4 flex-1 ${large ? "text-sm" : "text-xs"}`}>{p.desc}</p>
 
       {/* Highlights */}
-      <div className="flex flex-wrap gap-1.5 mb-4">
-        {project.highlights.map((h) => (
-          <span
-            key={h}
-            className="bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded"
-          >
+      <div className="flex flex-wrap gap-1.5 mb-3">
+        {p.highlights.map((h) => (
+          <span key={h} className="text-xs font-bold bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded">
             {h}
           </span>
         ))}
@@ -197,43 +167,32 @@ function ProjectCard({
 
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5 mb-5">
-        {project.tags.slice(0, large ? undefined : 4).map((t) => (
-          <span
-            key={t}
-            className="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded"
-          >
+        {(large ? p.tags : p.tags.slice(0, 4)).map((t) => (
+          <span key={t} className="text-xs bg-white/04 border border-white/07 text-slate-500 px-2 py-0.5 rounded-full">
             {t}
           </span>
         ))}
-        {!large && project.tags.length > 4 && (
-          <span className="bg-slate-100 text-slate-400 text-xs px-2 py-0.5 rounded">
-            +{project.tags.length - 4}
-          </span>
+        {!large && p.tags.length > 4 && (
+          <span className="text-xs text-slate-600 px-2 py-0.5">+{p.tags.length - 4}</span>
         )}
       </div>
 
-      {/* Actions */}
-      <div className="flex items-center gap-3 mt-auto">
-        {project.github ? (
+      <div className="flex items-center justify-between mt-auto">
+        {p.github ? (
           <a
-            href={project.github}
+            href={p.github}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 text-slate-600 hover:text-blue-600 text-sm font-medium transition-colors"
+            className="flex items-center gap-1.5 text-slate-500 hover:text-indigo-400 text-xs font-semibold transition-colors"
           >
-            <GithubIcon size={15} />
-            Code
+            <GithubIcon size={14} /> Code
           </a>
         ) : (
-          <span className="flex items-center gap-1.5 text-slate-300 text-sm">
-            <GithubIcon size={15} />
-            Private
+          <span className="flex items-center gap-1.5 text-slate-700 text-xs">
+            <GithubIcon size={14} /> Private
           </span>
         )}
-        <ExternalLink
-          size={14}
-          className="ml-auto text-slate-200 group-hover:text-blue-300 transition-colors"
-        />
+        <ExternalLink size={13} className="text-slate-700 group-hover:text-indigo-500 transition-colors" />
       </div>
     </div>
   );

@@ -7,21 +7,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Achraf Lamia — ML & Computer Vision Engineer",
   description:
-    "ML & CV Engineer specializing in real-time computer vision, edge AI deployment, and AWS cloud infrastructure.",
+    "ML & CV Engineer — real-time computer vision, edge AI on K230, AWS production infrastructure. Open to senior roles & relocation.",
   openGraph: {
     title: "Achraf Lamia — ML & CV Engineer",
-    description:
-      "End-to-end ML pipelines · Edge AI · AWS Cloud Infrastructure · MLOps",
+    description: "Edge AI · AWS EKS · YOLOv12 · Knowledge Distillation · MLOps",
     type: "website",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-slate-50 text-slate-900 antialiased`}>
+      <body className={`${inter.className} bg-[#020617] text-slate-100 antialiased`}>
         {children}
       </body>
     </html>

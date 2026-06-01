@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { GithubIcon } from "./icons";
 
 const links = [
   { href: "#about", label: "About" },
@@ -14,31 +15,31 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const fn = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
   }, []);
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-200"
+          ? "bg-[#020617]/90 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-lg font-bold text-slate-900 tracking-tight">
-          AL<span className="text-blue-600">.</span>
+        <a href="#" className="text-xl font-black tracking-tight">
+          <span className="grad-text">AL</span>
+          <span className="text-indigo-500">.</span>
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-sm font-medium text-slate-400 hover:text-white transition-colors"
             >
               {l.label}
             </a>
@@ -47,33 +48,32 @@ export default function Navbar() {
             href="https://github.com/AchrafLamia"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-medium bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-2 text-sm font-semibold border border-white/10 text-slate-300 px-4 py-2 rounded-lg hover:border-indigo-500/50 hover:text-indigo-400 transition-all"
           >
+            <GithubIcon size={16} />
             GitHub
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-slate-600"
+          className="md:hidden p-2 text-slate-400"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          <div className="w-5 h-0.5 bg-current mb-1" />
-          <div className="w-5 h-0.5 bg-current mb-1" />
-          <div className="w-5 h-0.5 bg-current" />
+          <span className="block w-5 h-0.5 bg-current mb-1.5" />
+          <span className="block w-5 h-0.5 bg-current mb-1.5" />
+          <span className="block w-3 h-0.5 bg-current" />
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-6 pb-4">
+        <div className="md:hidden bg-[#0f172a]/95 backdrop-blur-xl border-b border-white/5 px-6 py-4 space-y-1">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-2 text-sm font-medium text-slate-700 hover:text-blue-600"
+              className="block py-2.5 text-sm font-medium text-slate-400 hover:text-white"
             >
               {l.label}
             </a>
