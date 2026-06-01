@@ -1,98 +1,54 @@
 import { Mail, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
 
-const items = [
-  {
-    type: "mail" as const,
-    label: "Email",
-    value: "lamia.achraf60@gmail.com",
-    href: "mailto:lamia.achraf60@gmail.com",
-    accent: "group-hover:text-blue-400",
-    glow: "group-hover:border-blue-500/30 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.08)]",
-  },
-  {
-    type: "linkedin" as const,
-    label: "LinkedIn",
-    value: "linkedin.com/in/achraflamia",
-    href: "https://linkedin.com/in/achraflamia",
-    accent: "group-hover:text-indigo-400",
-    glow: "group-hover:border-indigo-500/30 group-hover:shadow-[0_0_30px_rgba(99,102,241,0.08)]",
-  },
-  {
-    type: "github" as const,
-    label: "GitHub",
-    value: "github.com/AchrafLamia",
-    href: "https://github.com/AchrafLamia",
-    accent: "group-hover:text-violet-400",
-    glow: "group-hover:border-violet-500/30 group-hover:shadow-[0_0_30px_rgba(139,92,246,0.08)]",
-  },
-  {
-    type: "location" as const,
-    label: "Location",
-    value: "Casablanca, Morocco",
-    href: null,
-    accent: "text-slate-400",
-    glow: "",
-  },
-];
-
-function Icon({ type, size }: { type: typeof items[0]["type"]; size: number }) {
-  if (type === "mail") return <Mail size={size} />;
-  if (type === "linkedin") return <LinkedinIcon size={size} />;
-  if (type === "github") return <GithubIcon size={size} />;
-  return <MapPin size={size} />;
-}
-
 export default function Contact() {
   return (
-    <section id="contact" className="py-28 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent pointer-events-none" />
+    <section id="contact" className="py-32">
+      <div className="max-w-7xl mx-auto px-6">
 
-      <div className="relative max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="section-label">Contact</p>
-          <h2 className="text-4xl sm:text-5xl font-black mb-3">
-            Let&apos;s <span className="grad-text">Connect</span>
+        {/* Large CTA headline */}
+        <div className="mb-20">
+          <p className="eyebrow">Contact</p>
+          <h2 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] mb-6">
+            Let&apos;s build<br />
+            <span className="g-text">something</span><br />
+            together
           </h2>
-          <p className="text-slate-500 max-w-md mx-auto">
+          <p className="text-slate-500 text-lg max-w-md">
             Open to senior ML/CV and cloud engineering roles worldwide — remote or relocation.
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto grid sm:grid-cols-2 gap-4">
-          {items.map((item) => {
+        {/* Contact row */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12">
+          {[
+            { icon: <Mail size={18} strokeWidth={1.75} />,     label: "Email",     value: "lamia.achraf60@gmail.com",    href: "mailto:lamia.achraf60@gmail.com" },
+            { icon: <LinkedinIcon size={18} />,                label: "LinkedIn",  value: "linkedin.com/in/achraflamia", href: "https://linkedin.com/in/achraflamia" },
+            { icon: <GithubIcon size={18} />,                  label: "GitHub",    value: "github.com/AchrafLamia",      href: "https://github.com/AchrafLamia" },
+            { icon: <MapPin size={18} strokeWidth={1.75} />,   label: "Location",  value: "Casablanca, Morocco",          href: null },
+          ].map((item) => {
             const inner = (
-              <div className={`group glass rounded-2xl p-6 flex items-center gap-5 transition-all duration-200 ${item.glow}`}>
-                <div className={`text-slate-500 transition-colors shrink-0 ${item.accent}`}>
-                  <Icon type={item.type} size={22} />
+              <div className="card p-5 flex items-center gap-4 group hover:border-indigo-500/25 transition-all">
+                <div className="w-9 h-9 rounded-lg bg-white/04 border border-white/08 flex items-center justify-center shrink-0 text-slate-500 group-hover:text-indigo-400 transition-colors">
+                  {item.icon}
                 </div>
-                <div>
-                  <p className="text-xs text-slate-600 font-semibold uppercase tracking-widest mb-0.5">
-                    {item.label}
-                  </p>
-                  <p className={`font-semibold text-sm text-slate-300 transition-colors ${item.accent}`}>
-                    {item.value}
-                  </p>
+                <div className="min-w-0">
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-600 mb-0.5">{item.label}</p>
+                  <p className="text-sm font-semibold text-slate-300 truncate group-hover:text-white transition-colors">{item.value}</p>
                 </div>
               </div>
             );
             return item.href ? (
-              <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
-                {inner}
-              </a>
-            ) : (
-              <div key={item.label}>{inner}</div>
-            );
+              <a key={item.label} href={item.href} target="_blank" rel="noreferrer">{inner}</a>
+            ) : <div key={item.label}>{inner}</div>;
           })}
         </div>
 
-        {/* Availability note */}
-        <div className="mt-10 text-center">
-          <div className="inline-flex items-center gap-2.5 border border-emerald-500/20 bg-emerald-500/08 text-emerald-400 text-sm font-medium px-5 py-2.5 rounded-full">
-            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            Available — open to new opportunities
-          </div>
+        <div className="flex items-center gap-3">
+          <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+          <span className="text-slate-500 text-sm font-medium">Available now — actively looking for new opportunities</span>
         </div>
+
       </div>
     </section>
   );
