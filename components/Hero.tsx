@@ -27,9 +27,7 @@ export default function Hero() {
 
         {/* Name */}
         <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-4 fade-up fade-up-1">
-          Achraf
-          <br />
-          <span className="grad-text">Lamia</span>
+          Achraf <span className="grad-text">Lamia</span>
         </h1>
 
         {/* Title */}
