@@ -79,8 +79,8 @@ section { position: relative; z-index: 2; }
 
 .kicker {
   font-family: var(--mono);
-  font-size: 12px; font-weight: 500;
-  letter-spacing: 0.22em; text-transform: uppercase;
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.20em; text-transform: uppercase;
   color: var(--cyan);
   display: inline-flex; align-items: center; gap: 10px;
 }
@@ -133,32 +133,32 @@ section { position: relative; z-index: 2; }
 .nav.stuck { border-bottom-color: var(--line); background: rgba(8,9,11,0.86); }
 .nav-brand {
   display: flex; align-items: center; gap: 12px;
-  font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em;
+  font-family: var(--mono); font-size: 15px; letter-spacing: 0.03em;
   color: var(--text); text-decoration: none;
 }
 .nav-brand .dot {
-  width: 8px; height: 8px; border-radius: 50%;
+  width: 9px; height: 9px; border-radius: 50%;
   background: var(--cyan); box-shadow: 0 0 10px var(--cyan-glow);
   animation: pulse 2.4s infinite var(--ease);
 }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
-.nav-brand b { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; }
-.nav-brand .role { color: var(--faint); }
+.nav-brand b { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
+.nav-brand .role { color: var(--faint); font-size: 14px; }
 
-.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links a {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em;
-  color: var(--muted); text-decoration: none; padding: 8px 12px;
+  font-family: var(--mono); font-size: 13.5px; letter-spacing: 0.04em;
+  color: var(--muted); text-decoration: none; padding: 8px 13px;
   border-radius: 6px; position: relative; transition: color 0.25s;
 }
-.nav-links a .n { color: var(--faint); margin-right: 6px; }
+.nav-links a .n { color: var(--faint); margin-right: 5px; font-size: 11px; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a.active { color: var(--cyan); }
 .nav-links a.active .n { color: var(--cyan); }
 .nav-cta {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em;
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em;
   color: var(--bg); background: var(--cyan); text-decoration: none;
-  padding: 9px 16px; border-radius: 7px; font-weight: 600;
+  padding: 10px 18px; border-radius: 7px; font-weight: 700;
   box-shadow: 0 0 0 1px var(--cyan), 0 8px 26px -10px var(--cyan-glow);
   transition: transform 0.25s var(--ease), box-shadow 0.25s;
 }
@@ -188,42 +188,42 @@ section { position: relative; z-index: 2; }
 .hero-left { position: relative; }
 
 .boot {
-  font-family: var(--mono); font-size: 12.5px; color: var(--faint);
-  letter-spacing: 0.02em; margin-bottom: 26px; min-height: 20px;
+  font-family: var(--mono); font-size: 14px; color: var(--faint);
+  letter-spacing: 0.02em; margin-bottom: 28px; min-height: 22px;
   display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
 }
 .boot .ok { color: var(--cyan); }
 .boot .cur {
-  display: inline-block; width: 8px; height: 15px; background: var(--cyan);
+  display: inline-block; width: 9px; height: 17px; background: var(--cyan);
   box-shadow: 0 0 8px var(--cyan-glow); animation: blink 1.05s steps(1) infinite;
-  vertical-align: -2px;
+  vertical-align: -3px;
 }
 @keyframes blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
 
 .hero h1 {
-  font-size: clamp(46px, 8.4vw, 116px);
-  font-weight: 600; line-height: 0.9; letter-spacing: -0.035em;
-  margin-bottom: 18px;
+  font-size: clamp(56px, 9vw, 124px);
+  font-weight: 700; line-height: 0.88; letter-spacing: -0.04em;
+  margin-bottom: 24px;
 }
 .hero h1 .ln { display: block; overflow: hidden; }
 .hero h1 .ln span { display: inline-block; }
 .hero h1 em {
   font-style: normal; color: transparent;
-  -webkit-text-stroke: 1.4px var(--muted);
+  -webkit-text-stroke: 1.6px var(--muted);
 }
 .hero-role {
-  font-family: var(--mono); font-size: clamp(14px, 1.6vw, 18px);
-  color: var(--text); letter-spacing: 0.02em; margin-bottom: 22px;
+  font-family: var(--mono); font-size: clamp(15px, 1.7vw, 20px);
+  color: var(--text); letter-spacing: 0.02em; margin-bottom: 24px;
   display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
 }
 .hero-role .tag {
   color: var(--cyan); border: 1px solid var(--cyan-dim);
-  background: var(--cyan-dim); padding: 3px 10px; border-radius: 5px; font-size: 12px;
+  background: var(--cyan-dim); padding: 4px 12px; border-radius: 5px; font-size: 13px;
 }
 .hero-meta {
-  display: flex; gap: 22px; flex-wrap: wrap;
-  font-family: var(--mono); font-size: 13px; color: var(--muted);
-  margin-bottom: 34px; padding-top: 22px; border-top: 1px solid var(--line);
+  display: flex; gap: 24px; flex-wrap: wrap;
+  font-family: var(--mono); font-size: 14px; color: var(--muted);
+  margin-bottom: 36px; padding-top: 22px; border-top: 1px solid var(--line);
 }
 .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
 .hero-meta .mk { color: var(--faint); }
@@ -231,8 +231,8 @@ section { position: relative; z-index: 2; }
 
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
-  font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em;
-  text-decoration: none; padding: 13px 22px; border-radius: 9px;
+  font-family: var(--mono); font-size: 14px; letter-spacing: 0.04em;
+  text-decoration: none; padding: 14px 24px; border-radius: 9px;
   display: inline-flex; align-items: center; gap: 10px;
   transition: transform 0.25s var(--ease), background 0.25s, border-color 0.25s, color 0.25s;
 }
