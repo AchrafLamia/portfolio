@@ -98,8 +98,8 @@ section { position: relative; z-index: 2; }
   border-top: 1px solid var(--line);
 }
 .section-head h2 {
-  font-size: clamp(30px, 4.4vw, 56px);
-  font-weight: 600; line-height: 1.02; letter-spacing: -0.02em;
+  font-size: clamp(36px, 5vw, 68px);
+  font-weight: 700; line-height: 1.0; letter-spacing: -0.025em;
   margin-top: 18px;
 }
 .section-head .idx {
@@ -201,9 +201,9 @@ section { position: relative; z-index: 2; }
 @keyframes blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
 
 .hero h1 {
-  font-size: clamp(56px, 9vw, 124px);
-  font-weight: 700; line-height: 0.88; letter-spacing: -0.04em;
-  margin-bottom: 24px;
+  font-size: clamp(72px, 12vw, 160px);
+  font-weight: 700; line-height: 0.86; letter-spacing: -0.045em;
+  margin-bottom: 28px;
 }
 .hero h1 .ln { display: block; overflow: hidden; }
 .hero h1 .ln span { display: inline-block; }
