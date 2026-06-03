@@ -359,8 +359,8 @@ section { position: relative; z-index: 2; }
 }
 @media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
 .about-lead {
-  font-size: clamp(22px, 2.6vw, 32px); font-weight: 400; line-height: 1.32;
-  letter-spacing: -0.01em; color: var(--text);
+  font-size: clamp(17px, 1.8vw, 22px); font-weight: 400; line-height: 1.45;
+  letter-spacing: -0.005em; color: var(--text);
 }
 .about-lead b { color: var(--cyan); font-weight: 500; }
 .about-lead .am { color: var(--amber); font-weight: 500; }
