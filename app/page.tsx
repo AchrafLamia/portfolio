@@ -784,7 +784,7 @@ export default function Home() {
           </div>
           <div className="footer-foot">
             <span className="sig">© 2026 Achraf Lamia · ML &amp; Computer Vision Engineer</span>
-            <span>Casablanca, Morocco · 33.5731° N, 7.5898° W</span>
+            <span>Casablanca, Morocco</span>
           </div>
         </div>
       </footer>
