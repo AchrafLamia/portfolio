@@ -561,8 +561,8 @@ section { position: relative; z-index: 2; }
 }
 .footer-inner { max-width: var(--maxw); margin: 0 auto; }
 .footer h2 {
-  font-size: clamp(40px, 7vw, 100px); font-weight: 600; letter-spacing: -0.035em;
-  line-height: 0.92; margin-bottom: 36px;
+  font-size: clamp(28px, 4vw, 56px); font-weight: 700; letter-spacing: -0.025em;
+  line-height: 1.05; margin-bottom: 30px;
 }
 .footer h2 a { color: var(--cyan); text-decoration: none; transition: color 0.3s; }
 .footer h2 a:hover { color: var(--amber); }
