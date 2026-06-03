@@ -201,9 +201,9 @@ section { position: relative; z-index: 2; }
 @keyframes blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
 
 .hero h1 {
-  font-size: clamp(72px, 12vw, 160px);
-  font-weight: 700; line-height: 0.86; letter-spacing: -0.045em;
-  margin-bottom: 28px;
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 700; line-height: 0.9; letter-spacing: -0.035em;
+  margin-bottom: 20px;
 }
 .hero h1 .ln { display: block; overflow: hidden; }
 .hero h1 .ln span { display: inline-block; }
@@ -212,13 +212,13 @@ section { position: relative; z-index: 2; }
   -webkit-text-stroke: 1.6px var(--muted);
 }
 .hero-role {
-  font-family: var(--mono); font-size: clamp(15px, 1.7vw, 20px);
+  font-family: var(--mono); font-size: clamp(16px, 1.9vw, 22px);
   color: var(--text); letter-spacing: 0.02em; margin-bottom: 24px;
   display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
 }
 .hero-role .tag {
   color: var(--cyan); border: 1px solid var(--cyan-dim);
-  background: var(--cyan-dim); padding: 4px 12px; border-radius: 5px; font-size: 13px;
+  background: var(--cyan-dim); padding: 4px 12px; border-radius: 5px; font-size: 14px;
 }
 .hero-meta {
   display: flex; gap: 24px; flex-wrap: wrap;
