@@ -132,33 +132,33 @@ section { position: relative; z-index: 2; }
 }
 .nav.stuck { border-bottom-color: var(--line); background: rgba(8,9,11,0.86); }
 .nav-brand {
-  display: flex; align-items: center; gap: 12px;
-  font-family: var(--mono); font-size: 15px; letter-spacing: 0.03em;
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--mono); font-size: 17px; letter-spacing: 0.02em;
   color: var(--text); text-decoration: none;
 }
 .nav-brand .dot {
-  width: 9px; height: 9px; border-radius: 50%;
+  width: 10px; height: 10px; border-radius: 50%;
   background: var(--cyan); box-shadow: 0 0 10px var(--cyan-glow);
   animation: pulse 2.4s infinite var(--ease);
 }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
-.nav-brand b { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
-.nav-brand .role { color: var(--faint); font-size: 14px; }
+.nav-brand b { font-family: var(--display); font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
+.nav-brand .role { color: var(--faint); font-size: 16px; }
 
 .nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links a {
-  font-family: var(--mono); font-size: 13.5px; letter-spacing: 0.04em;
-  color: var(--muted); text-decoration: none; padding: 8px 13px;
+  font-family: var(--mono); font-size: 15px; letter-spacing: 0.04em;
+  color: var(--muted); text-decoration: none; padding: 9px 14px;
   border-radius: 6px; position: relative; transition: color 0.25s;
 }
-.nav-links a .n { color: var(--faint); margin-right: 5px; font-size: 11px; }
+.nav-links a .n { color: var(--faint); margin-right: 5px; font-size: 12px; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a.active { color: var(--cyan); }
 .nav-links a.active .n { color: var(--cyan); }
 .nav-cta {
-  font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em;
+  font-family: var(--mono); font-size: 14px; letter-spacing: 0.05em;
   color: var(--bg); background: var(--cyan); text-decoration: none;
-  padding: 10px 18px; border-radius: 7px; font-weight: 700;
+  padding: 11px 20px; border-radius: 7px; font-weight: 700;
   box-shadow: 0 0 0 1px var(--cyan), 0 8px 26px -10px var(--cyan-glow);
   transition: transform 0.25s var(--ease), box-shadow 0.25s;
 }
